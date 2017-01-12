@@ -1,0 +1,41 @@
+<div class="head">
+	<strong>Please select employee:</strong>
+	
+	<ui-select ng-model="search.selected" on-select="ctrl.get_user_data($item)" style="min-width:300px">
+		<ui-select-match placeholder="find person by name or surname">{{$select.selected.firstname}}</ui-select-match>
+		<ui-select-choices repeat="item in data | propsFilter: { firstname: $select.search, surname: $select.search }">
+			<span ng-bind-html="item.firstname | highlight: $select.search"></span>
+				<small>
+					<span ng-bind-html="''+item.surname | highlight: $select.search"></span>
+					Age: {{item.age}}
+				</small>
+		</ui-select-choices>
+	</ui-select>
+</div>
+	
+<div ng-if="selected_person">
+	<div class="text">
+		<p>Greetings, {{selected_person.title}} {{selected_person.surname}}, your financial breakdown is:</p>
+	</div>
+	
+	<div class="body">
+		<table class="table-bordered table-condensed">
+			<thead>
+				<th>First name</th>
+				<th>Surname</th>
+				<th>Takehome</th>
+				<th>Income tax</th>
+				<th>National insurance</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{selected_person.firstname}}</td>
+					<td>{{selected_person.surname}}</td>
+					<td>{{selected_person.takehome}}</td>
+					<td>{{selected_person.incometax}}</td>
+					<td>{{selected_person.nationains}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "name": "javascript-task",
+  "description": "Javascript task",
+  "private": true,
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "node index.js",
+    "gulp": "gulp default",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-newer": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-order": "^1.1.1",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^1.2.0",
+    "gulp-remote-src": "^0.4.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "run-sequence": "^1.1.5"
+  },
+    "scripts": {
+    "test": "mocha"
+  }
+}
